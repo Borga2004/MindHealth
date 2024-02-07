@@ -44,7 +44,7 @@ async def depression(ctx: CommandContext):
     pic3 = Emoji(name="😢")
 
     embed = Embed(title="🧠 MindHealth: Mind", description=f"Hey, <@{ctx.author.id}>, tell me how you currently feel.", color=0xFFFFFF)
-    embed.set_thumbnail(url="url/../main/assets/consult.gif")
+    embed.set_thumbnail(url=https://github.com/Borga2004/MindHealth/main/assets/consult.gif")
 
     for i, question in enumerate(questions): # cycle through each question and make a menu for each
         selection = [SelectOption(
@@ -77,16 +77,16 @@ async def depression(ctx: CommandContext):
 
     async def depression_res(score: int):
         score_ranges = [
-            (0, 10, "**normal** levels of stress. Ups and downs happen in life and shape who we are for the better. Keep going strong!", "url/../main/assets/normal.png", 0x00FF00),
-            (11, 16, "**mild** levels of mood disturbance.", "url/../main/assets/moody.png", 0xFFFF00),
+            (0, 10, "**normal** levels of stress. Ups and downs happen in life and shape who we are for the better. Keep going strong!", "https://github.com/Borga2004/MindHealth/main/assets/normal.png", 0x00FF00),
+            (11, 16, "**mild** levels of mood disturbance.", "https://github.com/Borga2004/MindHealth/main/assets/moody.png", 0xFFFF00),
             (17, 20, "**borderline clinical depression**. Consider making an appointment with your doctor to discuss ways going forward.",
-             "url/../main/assets/moody.png", 0xFFA500),
+             "https://github.com/Borga2004/MindHealth/main/assets/moody.png", 0xFFA500),
             (21, 30, "**moderate clinical depression**. Consult a mental health professional soon to discuss ways going forward.",
-             "url/../main/assets/borderline.png", 0xFF8C00),
+             "https://github.com/Borga2004/MindHealth/main/assets/borderline.png", 0xFF8C00),
             (31, 40, "**severe clinical depression**. Consult a doctor or mental health professional soon to discuss ways going forward.",
-             "url/../main/assets/severe.png", 0xFF0000),
+             "https://github.com/Borga2004/MindHealth/main/assets/severe.png", 0xFF0000),
             (41, 63, "**extreme clinical depression**. Please visit an urgent care mental health clinic as this is likely impacting your overall health.",
-             "url/../main/assets/severe.png", 0x8B0000)
+             "https://github.com/Borga2004/MindHealth/main/assets/severe.png", 0x8B0000)
         ]
 
         for range_min, range_max, description, thumbnail, color in score_ranges:  # add buttons for treatment/SOS/support lines
@@ -102,4 +102,3 @@ async def depression(ctx: CommandContext):
     await depression_res(score)
 
 client.start()
-
